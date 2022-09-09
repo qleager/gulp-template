@@ -6,7 +6,7 @@ const
 
 module.exports = function imageCompressor(cb) {
   return gulp.src('src/images/*')
-    // .pipe(newer('dist/assets/images'))
+    .pipe(newer('dist/assets/images'))
     .pipe(imagemin({
       verbose: true,
       progressive: true,
