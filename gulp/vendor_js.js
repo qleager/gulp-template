@@ -1,13 +1,15 @@
 const
-  gulp   = require('gulp')
-  uglify = require('gulp-uglify')
-  rigger = require('gulp-rigger')
-  rename = require('gulp-rename')
-  bs     = require('browser-sync');
+  gulp    = require('gulp')
+  plumber = require('gulp-plumber')
+  uglify  = require('gulp-uglify')
+  include = require('gulp-include')
+  rename  = require('gulp-rename')
+  bs      = require('browser-sync');
 
 module.exports = function jsTransfer(cb) {
   gulp.src('src/js/vendor.js')
-    .pipe(rigger())
+    .pipe(plumber())
+    .pipe(include())
     .pipe(uglify()).on('error', function(error) {
       return console.error(error);
     })
