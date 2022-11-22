@@ -15,6 +15,7 @@ module.exports = function spriteCompiler(cb) {
       },
       parserOptions: { xmlMode: true }
     }))
+    .pipe(gulp.dest('dist/assets/icons'))
     .pipe(svgSprite({
       mode: {
         stack: {
