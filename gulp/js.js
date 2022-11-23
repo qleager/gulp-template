@@ -2,10 +2,14 @@ const
   gulp   = require('gulp')
   uglify = require('gulp-uglify')
   bs     = require('browser-sync')
-  eslint = require('gulp-eslint');
+  eslint = require('gulp-eslint')
+  babel  = require('gulp-babel');
 
 module.exports = function jsCompiler(cb) {
   gulp.src('src/script.js')
+    .pipe(babel({
+      presets: ["@babel/preset-env"]
+    }))
     // .pipe(uglify()).on('error', function(error) {
     //   console.log(error);
     //   cb(error);
