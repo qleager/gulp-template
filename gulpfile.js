@@ -5,9 +5,9 @@ const
 
 exports.watch      = tasks.watch;
 exports.pug        = tasks.pug;
-exports.sass       = tasks.sass;
+exports.scss       = tasks.scss;
 exports.js         = tasks.js;
-exports.vendorSass = tasks.vendor_sass;
+exports.vendorScss = tasks.vendor_scss;
 exports.vendorJs   = tasks.vendor_js;
 exports.images     = tasks.images;
 exports.fonts      = tasks.fonts;

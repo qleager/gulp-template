@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    "stylelint-order",
+    "stylelint-scss"
+  ],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-rational-order"
+  ],
+  "rules": {
+    "indentation": 2,
+    "at-rule-no-vendor-prefix": true,
+    "at-rule-empty-line-before":"never",
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/at-import-partial-extension": "never",
+    "block-closing-brace-newline-before": "always",
+    "block-closing-brace-newline-after": "always",
+    "at-rule-name-case": "lower",
+    "no-empty-source": null,
+    "at-rule-name-space-after": "always",
+    "at-rule-semicolon-newline-after": null,
+    "at-rule-semicolon-space-before": "never",
+    "selector-max-class": 2,
+    "color-hex-length": "long"
+  }
+}

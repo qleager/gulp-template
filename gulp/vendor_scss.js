@@ -8,7 +8,7 @@ const
   bs      = require('browser-sync');
 
 module.exports = function sassVendorCompiler(cb) {
-  gulp.src('src/sass/vendor.sass')
+  gulp.src('src/scss/vendor.scss')
     .pipe(plumber())
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(postcss([

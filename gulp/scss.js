@@ -7,11 +7,19 @@ const
   autoprefixer = require('gulp-autoprefixer')
   gcmq         = require('gulp-group-css-media-queries')
   sourcemap    = require('gulp-sourcemaps')
-  bs           = require('browser-sync');
+  bs           = require('browser-sync')
+  stylelint    = require('gulp-stylelint')
 
-module.exports = function sassCompiler(cb) {
-  gulp.src('src/*.sass',)
+module.exports = function scssCompiler(cb) {
+  gulp.src('src/*.scss',)
     .pipe(plumber())
+    .pipe(stylelint({
+      failAfterError: false,
+      reporters: [{
+        formatter: 'string',
+        console: true
+      }]
+    }))
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
