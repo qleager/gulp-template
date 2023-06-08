@@ -24,7 +24,12 @@ module.exports = function scssCompiler(cb) {
     .pipe(sass())
     .pipe(postcss([
       purge({
-        content: ['dist/*.html']
+        content: ['dist/*.html'],
+        safelist: [
+          /active\-[0-9]+/,
+          /show\-[0-9]+/,
+          'active'
+        ]
       })
     ]))
     .pipe(autoprefixer())
