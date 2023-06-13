@@ -7,6 +7,7 @@ exports.watch      = tasks.watch;
 exports.pug        = tasks.pug;
 exports.scss       = tasks.scss;
 exports.js         = tasks.js;
+exports.ts         = tasks.ts;
 exports.vendorScss = tasks.vendor_scss;
 exports.vendorJs   = tasks.vendor_js;
 exports.images     = tasks.images;
